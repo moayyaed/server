@@ -317,7 +317,7 @@ class ElementWrapper {
 			if (stripos($exception->getMessage(), "element not interactable") === false) {
 				throw $exception;
 			}
-			$this->printFailedCommandMessage($exception);
+			$this->printFailedCommandMessage($exception, $errorMessage);
 		}
 
 		$this->waitForElementToBeVisible();
